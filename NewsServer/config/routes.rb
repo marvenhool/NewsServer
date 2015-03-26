@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'news/all' => 'news#all'
   get 'news/id' => 'news#id'
-
+  get 'news/category' => 'news#category'
+  get 'news/title' => 'news#title'
+  get 'news/text' => 'news#text'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
