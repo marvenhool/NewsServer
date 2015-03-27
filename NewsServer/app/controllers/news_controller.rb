@@ -28,7 +28,8 @@ class NewsController < ApplicationController
 
   #カテゴリIDで抽出します
   def category
-    @news =News.find(params[:category])
+    @category = params[:category]
+    @news =News.find_by_sql(["select * from news where category =?", @category ])
     if params[:format]=="json"
       render json: @news
     elsif params[:format]=="xml"
